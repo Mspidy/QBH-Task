@@ -42,7 +42,6 @@ export class DetailsComponent {
           console.log(res)
           this.newContactInfo.reset();
           this.router.navigateByUrl('/download');
-          this.toastr.success('Successfully Data Inserted in databases;');
         }
       } catch (err) {
         console.log(err)
