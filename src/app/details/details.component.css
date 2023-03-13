@@ -1,5 +1,5 @@
 #contact {
-    background-color: #0000E7;
+    background-color: #00005b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,4 +192,8 @@
       width: 38px;
       height: 38px;
     }
+  }
+
+  .error{
+    margin-top: -10px;
   }

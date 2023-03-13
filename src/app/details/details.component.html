@@ -1,0 +1,47 @@
+<section id="contact">
+    <div class="contact-box">
+      <div class="contact-links">
+        <h2>CONTACT</h2>
+        <div class="links">
+          <div class="link">
+            <a><img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png"/></a>
+          </div>
+          <div class="link">
+            <a><img src="https://img.icons8.com/plasticine/100/null/github-squared.png"/></a>
+          </div>
+          <div class="link">
+            <a><img src="https://img.icons8.com/fluency/48/null/meta.png"/></a>
+          </div>
+          <div class="link">
+            <a><img src="https://img.icons8.com/color/48/null/instagram-new--v1.png"/></a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrapper">
+        <form [formGroup]="newContactInfo">
+          <div class="form-item">
+            <input type="text" required formControlName="name" minlength="1" maxlength="250">
+            <label>Name:</label>
+            <div class="error" *ngIf="!newContactInfo.controls.name.valid && (newContactInfo.controls.name.dirty||newContactInfo.controls.name.touched)" style="color:red">
+                Name is required
+            </div>
+          </div>
+          <div class="form-item">
+            <input type="text" name="email" required formControlName="email">
+            <label>Email:</label>
+            <div class="error" *ngIf="!newContactInfo.controls.email.valid && (newContactInfo.controls.email.dirty||newContactInfo.controls.email.touched)" style="color:red">
+                Email is required
+            </div>
+          </div>
+          <div class="form-item">
+            <input type="text" name="message" required formControlName="phone">
+            <label>Phone:</label>
+            <div class="error" *ngIf="!newContactInfo.controls.phone.valid && (newContactInfo.controls.phone.dirty||newContactInfo.controls.phone.touched)" style="color:red">
+                Phone is required
+            </div>
+          </div>
+          <button class="submit-btn" (click)="submitForm()">Send</button>  
+        </form>
+      </div>
+    </div>
+  </section>
